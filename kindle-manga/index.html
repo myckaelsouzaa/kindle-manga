@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>MangaKindle</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <button class="icon-btn menu-btn" id="menuBtn" title="Abrir menu" aria-label="Abrir menu">☰</button>
+            <div class="logo" data-tab="home"><span class="logo-full">Manga <b>Kindle</b></span><span class="logo-short">M<b>K</b></span>
+            </div>
+            <div class="search" id="searchBox">
+                <span aria-hidden="true"></span>
+                <input
+                    id="q"
+                    type="search"
+                    placeholder="Buscar mangá…"
+                    autocomplete="on"
+                >
+                <button class="search-close" id="searchClose" type="button" title="Fechar pesquisa" aria-label="Fechar pesquisa">×</button>
+            </div>
+            <button class="profile-btn" id="avBtn" title="Meu perfil">
+                <span class="avatar">🦊</span>
+                <small class="profile-name">Perfil</small>
+            </button>
+            <button class="icon-btn search-btn" id="searchBtn" title="Pesquisar" aria-label="Pesquisar">⌕</button>
+        </header>
+        <aside class="side-menu" id="sideMenu" aria-label="Menu principal">
+            <div class="side-head">
+                <strong>Menu</strong>
+                <button class="icon-btn" id="menuClose" title="Fechar menu" aria-label="Fechar menu">×</button>
+            </div>
+            <nav>
+                <button data-tab="home">⌂ <span>Início</span></button>
+                <button data-tab="saved">♡ <span>Salvos</span></button>
+                <button data-tab="downloads">↓ <span>Downloads</span></button>
+                <button data-tab="cfg">⚙ <span>Configurações</span></button>
+            </nav>
+            <button class="theme-menu-btn" id="themeBtn" title="Alternar tema">🌙 <span>Tema</span></button>
+        </aside>
+        <div class="menu-backdrop" id="menuBackdrop"></div>
+        <section class="auth-screen" id="authScreen" hidden></section>
+        <aside class="profile-drawer" id="profileDrawer" aria-label="Perfil">
+            <div class="side-head">
+                <strong>Meu perfil</strong>
+                <button class="icon-btn" data-close-profile title="Fechar perfil" aria-label="Fechar perfil">×</button>
+            </div>
+            <div id="profileDrawerContent"></div>
+        </aside>
+        <main id="main"></main>
+        <footer>
+            <b>Feito por Myckael Andrade
+            </b>
+            <br>
+            <small>Todos os direitos reservados</small>
+        </footer>
+        <div class="overlay" id="ov">
+            <div class="modal" id="modal"></div>
+        </div>
+        <div class="confirm-overlay" id="confirm">
+            <div class="confirm-box">
+                <h2>Remover download?</h2>
+                <p id="confirmText"></p>
+                <div class="confirm-actions">
+                    <button class="btn2" id="confirmCancel">Cancelar</button>
+                    <button class="btn" id="confirmOk">Remover</button>
+                </div>
+            </div>
+        </div>
+        <div id="reader">
+            <div id="prog">
+                <i></i>
+            </div>
+            <div class="rbar" id="rbar">
+                <button class="icon-btn" id="rBack" title="Voltar">←</button>
+                <div class="t" id="rTitle"></div>
+                <select id="rChap" aria-label="Capítulo"></select>
+                <button class="icon-btn" id="rSet" title="Configurações">Config.</button>
+            </div>
+            <div id="panel">
+                <label>Cor de fundo</label>
+                <div class="seg" id="sBg">
+                    <button class="sw" data-rbg="#000000" style="background:#000;border:1px solid #666"></button>
+                    <button class="sw" data-rbg="#f4ecd8" style="background:#f4ecd8"></button>
+                    <button class="sw" data-rbg="#ffffff" style="background:#fff"></button>
+                    <button class="sw" data-rbg="#2b2b2f" style="background:#2b2b2f"></button>
+                </div>
+                <label>Direção de leitura</label>
+                <div class="seg" id="sDir">
+                    <button data-rd="h">Horizontal</button>
+                    <button data-rd="v">Vertical</button>
+                </div>
+                <label>Brilho das páginas</label>
+                <input
+                    type="range"
+                    id="sBr"
+                    min="40"
+                    max="120"
+                >
+                <label>Qualidade das imagens</label>
+                <div class="seg" id="sQ">
+                    <button data-rq="data-saver">Econômica</button>
+                    <button data-rq="data">Alta</button>
+                </div>
+            </div>
+            <div id="stage"></div>
+            <div class="hud" id="hud"></div>
+        </div>
+        <script type="module" src="App.js"></script>
+    </body>
+</html>
