@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>MangaKindle</title>
+        <link rel="icon" href="assets/favicon.ico" sizes="any">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <svg
+            width="0"
+            height="0"
+            style="position:absolute"
+            aria-hidden="true"
+            focusable="false"
+        >
+            <symbol id="i-menu" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+            </symbol>
+            <symbol id="i-x" viewBox="0 0 24 24">
+                <path d="M18 6 6 18M6 6l12 12"/>
+            </symbol>
+            <symbol id="i-search" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"/>
+                <path d="m20 20-3.5-3.5"/>
+            </symbol>
+            <symbol id="i-home" viewBox="0 0 24 24">
+                <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
+            </symbol>
+            <symbol id="i-heart" viewBox="0 0 24 24">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/>
+            </symbol>
+            <symbol id="i-download" viewBox="0 0 24 24">
+                <path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>
+            </symbol>
+            <symbol id="i-arrow-left" viewBox="0 0 24 24">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </symbol>
+            <symbol id="i-arrow-right" viewBox="0 0 24 24">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </symbol>
+            <symbol id="i-chevron-left" viewBox="0 0 24 24">
+                <path d="m15 18-6-6 6-6"/>
+            </symbol>
+            <symbol id="i-chevron-right" viewBox="0 0 24 24">
+                <path d="m9 18 6-6-6-6"/>
+            </symbol>
+            <symbol id="i-sliders" viewBox="0 0 24 24">
+                <path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/>
+            </symbol>
+            <symbol id="i-user" viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 21a8 8 0 0 1 16 0"/>
+            </symbol>
+            <symbol id="i-star" viewBox="0 0 24 24">
+                <path fill="currentColor" stroke="none" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.3L5.8 21 7 14.2 2 9.3l6.9-1z"/>
+            </symbol>
+            <symbol id="i-check" viewBox="0 0 24 24">
+                <path d="M20 6 9 17l-5-5"/>
+            </symbol>
+            <symbol id="i-minus" viewBox="0 0 24 24">
+                <path d="M5 12h14"/>
+            </symbol>
+            <symbol id="i-sun" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+            </symbol>
+            <symbol id="i-moon" viewBox="0 0 24 24">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+            </symbol>
+            <symbol id="i-palette" viewBox="0 0 24 24">
+                <circle cx="13.5" cy="6.5" r="1"/>
+                <circle cx="17.5" cy="10.5" r="1"/>
+                <circle cx="8.5" cy="7.5" r="1"/>
+                <circle cx="6.5" cy="12.5" r="1"/>
+                <path d="M12 22a10 10 0 1 1 10-10c0 3-2.5 3.5-4.5 3.5H15a2 2 0 0 0-1.5 3.3c.9 1 .2 3.2-1.5 3.2z"/>
+            </symbol>
+            <symbol id="i-list" viewBox="0 0 24 24">
+                <path d="M3 6h.01M3 12h.01M3 18h.01M8 6h13M8 12h13M8 18h13"/>
+            </symbol>
+            <symbol id="i-image" viewBox="0 0 24 24">
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="2"
+                />
+                <circle cx="9" cy="9" r="2"/>
+                <path d="m21 15-4-4L5 21"/>
+            </symbol>
+        </svg>
+        <header>
+            <button
+                class="icon-btn menu-btn"
+                id="menuBtn"
+                title="Abrir menu"
+                aria-label="Abrir menu"
+            >
+                <svg class="ic" aria-hidden="true">
+                    <use href="#i-menu"/>
+                </svg>
+            </button>
+            <div class="logo" data-tab="home">
+                <img class="brand-logo" src="assets/logo.png" alt="">
+                <span class="logo-full">Manga
+                    <b>Kindle</b>
+                </span>
+                <span class="logo-short">M
+                    <b>K</b>
+                </span>
+            </div>
+            <div class="search" id="searchBox">
+                <span aria-hidden="true"></span>
+                <input
+                    id="q"
+                    type="search"
+                    placeholder="Buscar mangá…"
+                    autocomplete="on"
+                >
+                <button
+                    class="search-close"
+                    id="searchClose"
+                    type="button"
+                    title="Fechar pesquisa"
+                    aria-label="Fechar pesquisa"
+                >
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-x"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="profile-btn" id="avBtn" title="Meu perfil">
+                <span class="avatar">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-user"/>
+                    </svg>
+                </span>
+                <small class="profile-name">Perfil</small>
+            </button>
+            <button
+                class="theme-btn"
+                id="themeBtn"
+                title="Escolher tema"
+                aria-label="Escolher tema"
+            >
+                <svg class="ic" aria-hidden="true">
+                    <use href="#i-palette"/>
+                </svg>
+                <span>Tema</span>
+            </button>
+            <button
+                class="icon-btn search-btn"
+                id="searchBtn"
+                title="Pesquisar"
+                aria-label="Pesquisar"
+            >
+                <svg class="ic" aria-hidden="true">
+                    <use href="#i-search"/>
+                </svg>
+            </button>
+        </header>
+        <aside class="side-menu" id="sideMenu" aria-label="Menu principal">
+            <div class="side-head">
+                <strong>Menu</strong>
+                <button
+                    class="icon-btn"
+                    id="menuClose"
+                    title="Fechar menu"
+                    aria-label="Fechar menu"
+                >
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-x"/>
+                    </svg>
+                </button>
+            </div>
+            <nav>
+                <button data-tab="home">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-home"/>
+                    </svg>
+                    <span>Início</span>
+                </button>
+                <button data-tab="reco" hidden>
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-star"/>
+                    </svg>
+                    <span>Para você</span>
+                    <i class="reco-dot" aria-label="Novas recomendações"></i>
+                </button>
+                <button data-tab="saved">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-heart"/>
+                    </svg>
+                    <span>Salvos</span>
+                </button>
+                <button data-tab="downloads">
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-download"/>
+                    </svg>
+                    <span>Downloads</span>
+                </button>
+            </nav>
+        </aside>
+        <div class="menu-backdrop" id="menuBackdrop"></div>
+        <section class="auth-screen" id="authScreen" hidden></section>
+        <aside class="profile-drawer" id="profileDrawer" aria-label="Perfil">
+            <div class="side-head">
+                <strong>Meu perfil</strong>
+                <button
+                    class="icon-btn"
+                    data-close-profile
+                    title="Fechar perfil"
+                    aria-label="Fechar perfil"
+                >
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-x"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="profileDrawerContent"></div>
+        </aside>
+        <main id="main"></main>
+        <footer>
+            <b>Feito por Myckael Andrade</b>
+            <br>
+            <small>Todos os direitos reservados</small>
+        </footer>
+        <div class="overlay" id="ov">
+            <div class="modal" id="modal"></div>
+        </div>
+        <div class="confirm-overlay" id="confirm">
+            <div class="confirm-box">
+                <h2>Remover download?</h2>
+                <p id="confirmText"></p>
+                <div class="confirm-actions">
+                    <button class="btn2" id="confirmCancel">Cancelar</button>
+                    <button class="btn" id="confirmOk">Remover</button>
+                </div>
+            </div>
+        </div>
+        <div id="reader">
+            <div id="prog">
+                <i></i>
+            </div>
+            <div class="rbar" id="rbar">
+                <button
+                    class="icon-btn"
+                    id="rBack"
+                    title="Voltar"
+                    aria-label="Voltar"
+                >
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-arrow-left"/>
+                    </svg>
+                </button>
+                <div class="t" id="rTitle"></div>
+                <select id="rChap" aria-label="Capítulo"></select>
+                <button
+                    class="icon-btn"
+                    id="rSet"
+                    title="Configurações"
+                    aria-label="Configurações"
+                >
+                    <svg class="ic" aria-hidden="true">
+                        <use href="#i-sliders"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="panel">
+                <label>Cor de fundo</label>
+                <div class="seg" id="sBg">
+                    <button class="sw" data-rbg="#000000" style="background:#000;border:1px solid #666"></button>
+                    <button class="sw" data-rbg="#f4ecd8" style="background:#f4ecd8"></button>
+                    <button class="sw" data-rbg="#ffffff" style="background:#fff"></button>
+                    <button class="sw" data-rbg="#2b2b2f" style="background:#2b2b2f"></button>
+                </div>
+                <label>Direção de leitura</label>
+                <div class="seg" id="sDir">
+                    <button data-rd="h">Horizontal</button>
+                    <button data-rd="v">Vertical</button>
+                </div>
+                <label>Modo de página</label>
+                <div class="seg" id="sLayout">
+                    <button data-rl="single">Single Page</button>
+                    <button data-rl="double">Double Page</button>
+                </div>
+                <label>Barra de progresso</label>
+                <div class="seg">
+                    <button data-rp="toggle" id="sProg" type="button">Exibir</button>
+                </div>
+                <label>Brilho das páginas</label>
+                <input
+                    type="range"
+                    id="sBr"
+                    min="40"
+                    max="120"
+                >
+                <label>Qualidade das imagens</label>
+                <div class="seg" id="sQ">
+                    <button data-rq="data-saver">Econômica</button>
+                    <button data-rq="data">Alta</button>
+                </div>
+            </div>
+            <div id="stage"></div>
+            <div class="hud" id="hud"></div>
+        </div>
+        <script type="module" src="App.js"></script>
+    </body>
+</html>
