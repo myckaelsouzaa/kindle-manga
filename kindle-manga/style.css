@@ -2425,7 +2425,7 @@ select {
 .avs button {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 100%;
   font-size: 1.6rem;
   background: var(--surface2);
   border: 2px solid transparent
@@ -2515,7 +2515,6 @@ header {
   min-width: 48px;
   min-height: 42px;
   color: var(--muted);
-  margin-left: clamp(8px, 2vw, 28px);
 }
 
 .profile-btn .avatar {
@@ -2524,7 +2523,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 100%;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
