@@ -15,11 +15,31 @@
       "use": "@vercel/static"
     },
     {
-      "src": "assets/**",
+      "src": "App.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Controller.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "GooglePay.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "PremiumController.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "View.js",
       "use": "@vercel/static"
     },
     {
       "src": "sw.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
       "use": "@vercel/static"
     }
   ],
