@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "builds": [
@@ -20,6 +19,18 @@
     },
     {
       "src": "Controller.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "PremiumView.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "Model.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "PremiumModel.js",
       "use": "@vercel/static"
     },
     {
